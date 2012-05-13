@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>javatuples - Using javatuples</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+                                                        
+<script type="text/javascript">var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1276954-8']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();</script>
+                    </head>
+  <body class="composite">
+    <div id="banner">
+                  <a href="" id="bannerLeft">
+    
+                                            <img src="images/javatuples_logo.png" alt="" />
+    
+            </a>
+                    <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+            
+  
+    
+            <div class="xleft">
+        Last Published: 13 May 2012
+                  &nbsp;| Version: 1.2
+                      </div>
+            <div class="xright">            <a href="index.html">Main</a>
+            |
+                <a href="download.html">Download</a>
+            |
+                <a href="userlist.html">User Forum/List</a>
+            |
+                <a href="apidocs/index.html">Javadoc</a>
+            |
+                <a href="http://www.sourceforge.net/projects/java-tuples" class="externalLink">Sourceforge.net Project Page</a>
+            
+  
+
+  
+    
+            
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+            
+  
+    
+                   <h5>The javatuples Project</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">· Main</a>
+          </li>
+              
+    <li class="none">
+                    <a href="download.html">· Download</a>
+          </li>
+              
+    <li class="none">
+                    <a href="maveninfo.html">· Maven Info</a>
+          </li>
+              
+    <li class="none">
+                    <a href="dependencies.html">· Dependencies</a>
+          </li>
+              
+    <li class="none">
+                    <a href="userlist.html">· User Forum/List</a>
+          </li>
+              
+    <li class="none">
+              <strong>· Using javatuples</strong>
+        </li>
+              
+    <li class="none">
+                    <a href="source-repository.html">· Source Repository</a>
+          </li>
+              
+    <li class="none">
+                    <a href="license.html">· License</a>
+          </li>
+              
+    <li class="none">
+                    <a href="team.html">· Team</a>
+          </li>
+              
+    <li class="none">
+                    <a href="apidocs/index.html">· Javadoc</a>
+          </li>
+              
+    <li class="none">
+                    <a href="faq.html">· FAQ</a>
+          </li>
+          </ul>
+                                                 
+                        
+                        
+            <a href="http://maven.apache.org" title="Built with Maven 2" class="poweredBy">
+                            <img alt="Built with Maven 2" src="http://maven.apache.org/images/logos/maven-feather.png" />
+            </a>
+                                
+                        
+                        
+            <a href="http://sourceforge.net" title="Hosted on SourceForge.net" class="poweredBy">
+                            <img alt="Hosted on SourceForge.net" src="http://sflogo.sourceforge.net/sflogo.php?group_id=364317&type=1" />
+            </a>
+                               
+  
+
+  
+    
+            
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <div class="section"><h2>Using javatuples</h2>
+<div class="section"><h3>The tuple classes</h3>
+<p>There are ten tuple classes in javatuples:</p>
+<ul><li><tt>Unit&lt;A</tt>&gt; (1 element)</li>
+<li><tt>Pair&lt;A,B</tt>&gt; (2 elements)</li>
+<li><tt>Triplet&lt;A,B,C</tt>&gt; (3 elements)</li>
+<li><tt>Quartet&lt;A,B,C,D</tt>&gt; (4 elements)</li>
+<li><tt>Quintet&lt;A,B,C,D,E</tt>&gt; (5 elements)</li>
+<li><tt>Sextet&lt;A,B,C,D,E,F</tt>&gt; (6 elements)</li>
+<li><tt>Septet&lt;A,B,C,D,E,F,G</tt>&gt; (7 elements)</li>
+<li><tt>Octet&lt;A,B,C,D,E,F,G,H</tt>&gt; (8 elements)</li>
+<li><tt>Ennead&lt;A,B,C,D,E,F,G,H,I</tt>&gt; (9 elements)</li>
+<li><tt>Decade&lt;A,B,C,D,E,F,G,H,I,J</tt>&gt; (10 elements)</li>
+</ul>
+<p>Plus a couple of very common 2-element tuple classes equivalent to <tt>Pair</tt>, just for the sake of code semantics:</p>
+<ul><li><tt>KeyValue&lt;A,B</tt>&gt;</li>
+<li><tt>LabelValue&lt;A,B</tt>&gt;</li>
+</ul>
+<p>All tuple classes are:</p>
+<ul><li>Typesafe</li>
+<li>Immutable</li>
+<li>Iterable</li>
+<li>Serializable</li>
+<li>Comparable (implements <tt>Comparable&lt;Tuple</tt>&gt;)</li>
+<li>Implementing <tt>equals(...)</tt> and <tt>hashCode()</tt></li>
+<li>Implementing <tt>toString()</tt></li>
+</ul>
+</div>
+<div class="section"><h3>Creating tuples</h3>
+<p>Tuples can be instanced in a semantically elegant way, using the <tt>with(...)</tt> methods from each of the tuple classes:</p>
+<div class="source"><pre>    Pair&lt;String,Integer&gt; pair = Pair.with(&quot;hello&quot;, Integer.valueOf(23));
+    ...
+    Quintet&lt;String,Integer,Double,String,String&gt; quintet = 
+        Quintet.with(&quot;a&quot;, Integer.valueOf(3), Double.valueOf(34.2), &quot;b&quot;, &quot;c&quot;); </pre>
+</div>
+<p>Of course, constructors can also be used directly:</p>
+<div class="source"><pre>    Pair&lt;String,Integer&gt; pair = new Pair&lt;String,Integer&gt;(&quot;hello&quot;, Integer.valueOf(23));
+    ...
+    Quintet&lt;String,Integer,Double,String,String&gt; quintet = 
+        new Quintet&lt;String,Integer,Double,String,String&gt;(&quot;a&quot;, Integer.valueOf(3), Double.valueOf(34.2), &quot;b&quot;, &quot;c&quot;); </pre>
+</div>
+<p>You can also create tuples from collections or --more generally--, any iterable:</p>
+<div class="source"><pre>    Quintet&lt;String,String,String,String,String&gt; quintet = Quintet.fromCollection(myCollectionWith5Elements);
+    ...
+    // Retrieve three values from an iterable starting at a specific index
+    Triplet&lt;Integer,Integer,Integer&gt; triplet = Triplet.fromIterable(lotsOfInts, 7);</pre>
+</div>
+</div>
+<div class="section"><h3>Getting values</h3>
+<p>Values can be retrieved from a tuple by using the specific method for its position:</p>
+<div class="source"><pre>    Triplet&lt;String,Integer,Double&gt; triplet = ...
+    ...
+    Integer intVal = triplet.getValue1();</pre>
+</div>
+<p>Note that:</p>
+<ul><li>Value numbering starts with 0, so the getter for the first position will always be <tt>getValue0()</tt>.</li>
+<li>A tuple object will only offer you methods for the specific number of positions it holds (e.g. <tt>Quartet</tt> does not have a <tt>getValue4()</tt> method).</li>
+<li>All <tt>getValueX()</tt> getters are typesafe, no cast needed. Thanks to the type parameterization of the tuple classes (the &quot;<tt>&lt;A,B,C,D</tt>&gt;&quot; in <tt>Quartet&lt;A,B,C,D</tt>&gt;) the compiler will know that <i>value0</i> is of type <tt>A</tt>, <i>value1</i> of type <tt>B</tt>, and so on.</li>
+</ul>
+<p>There is also a <tt>getValue(int pos)</tt> method, but its use is not recommended, because the compiler cannot know the type of the result beforehand and therefore you will need a cast:</p>
+<div class="source"><pre>    Triplet&lt;String,Integer,Double&gt; triplet = ...
+    ...
+    Integer intVal = (Integer) triplet.getValue(1);</pre>
+</div>
+<p>Note that classes <b>KeyValue</b> and <b>LabelValue</b> have their <tt>getValue0()</tt>/<tt>getValue1()</tt> methods renamed as <tt>getKey()</tt>/<tt>getValue()</tt> and <tt>getLabel()</tt>/<tt>getValue()</tt>, respectively.</p>
+</div>
+<div class="section"><h3>Setting new values</h3>
+<p>In order to set new values for specific positions of a tuple, you can use the <tt>setAtX(...)</tt> setter methods:</p>
+<div class="source"><pre>    Triplet&lt;String,Integer,Double&gt; triplet = ...
+    ...
+    triplet = triplet.setAt2(Double.valueOf(245.21));</pre>
+</div>
+<p><b>Important: tuples are immutable</b>. This means that you will have to collect the return value of your <tt>setAtX(...)</tt> calls, and also that you will be able to change the type of a position in the tuple by changing the object that lives in that position:</p>
+<div class="source"><pre>    Triplet&lt;String,Integer,Double&gt; triplet = ...
+    ...
+    Triplet&lt;String,Integer,String&gt; otherTriplet = triplet.setAt2(&quot;North Atlantic&quot;);</pre>
+</div>
+</div>
+<div class="section"><h3>Adding or removing elements</h3>
+<p>New elements can be added to a tuple, converting it in a different tuple. </p>
+<p>For example, if you add a <tt>String</tt> to a <tt>Triplet&lt;String,Integer,Double</tt>&gt;, you will turn it into a <tt>Quartet&lt;String,Integer,Double,String</tt>&gt;:</p>
+<div class="source"><pre>    Triplet&lt;String,Integer,Double&gt; triplet = ...
+    ...
+    Quartet&lt;String,Integer,Double,String&gt; quartet = triplet.add(&quot;South Pacific&quot;);</pre>
+</div>
+<p>By default, new elements are added at the end of the tuple. But you can also add elements in other positions of the tuple by using the <tt>addAtX(...)</tt> methods:</p>
+<div class="source"><pre>    Triplet&lt;String,Integer,Double&gt; triplet = ...
+    ...
+    Quartet&lt;String,Integer,String,Double&gt; quartet = triplet.addAt2(&quot;Mediterranean&quot;);</pre>
+</div>
+<p>You can also add more than one element...</p>
+<div class="source"><pre>    Triplet&lt;String,Integer,Double&gt; triplet = ...
+    ...
+    Quintet&lt;String,Integer,String,String,Double&gt; quintet = triplet.addAt2(&quot;Red Sea&quot;, &quot;Caspian&quot;);</pre>
+</div>
+<p>...or even other tuples:</p>
+<div class="source"><pre>    Triplet&lt;String,Integer,Double&gt; triplet1 = ...
+    Triplet&lt;Byte,String[],String&gt; triplet2 = ...
+    ...
+    Sextet&lt;String,Integer,Byte,String[],String,Double&gt; sextet = triplet1.addAt2(triplet2);</pre>
+</div>
+<p>Removing elements is just as easy, and it will also transform your tuple. If you remove an element from a <tt>Triplet</tt>, you will get a <tt>Pair</tt>:</p>
+<div class="source"><pre>    Triplet&lt;String,Integer,Double&gt; triplet = ...
+    ...
+    Pair&lt;String,Double&gt; pair = triplet.removeFrom1();</pre>
+</div>
+</div>
+<div class="section"><h3>Converting to/from collections or arrays</h3>
+<p>A tuple can be easily converted to a list or an array, but you will lose your type-safety and end up with a <tt>List&lt;Object</tt>&gt; or an <tt>Object[]</tt>:</p>
+<div class="source"><pre>    Triplet&lt;String,Integer,Double&gt; triplet = ...
+    ...
+    List&lt;Object&gt; list = triplet.toList();
+    ...
+    Object[] array = triplet.toArray();</pre>
+</div>
+<p>Inversely, you can obtain a tuple from both a collection or an array:</p>
+<div class="source"><pre>    String[] array = ...
+    ...
+    Quartet&lt;String,String,String,String&gt; quartet = Quartet.fromArray(array); </pre>
+</div>
+<p>Note that your tuple will have all its elements set to the component type of the array (<tt>String</tt>, in this case). Also, note that...</p>
+<div class="source"><pre>    String[] array = new String[] { &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot; };
+    ...
+    // Array has five elements: will raise an exception trying to create a quartet!!
+    Quartet&lt;String,String,String,String&gt; quartet = Quartet.fromArray(array); </pre>
+</div>
+<p>...will raise the following exception:</p>
+<div class="source"><pre>    java.lang.IllegalArgumentException: Array must have exactly 4 elements in order to create a Quartet. Size is 5
+            at ...</pre>
+</div>
+</div>
+<div class="section"><h3>Iterating</h3>
+<p>All tuple classes in javatuples implement the <tt>Iterable&lt;Object</tt>&gt; interface, so it can be iterated in the same way as collections or arrays:</p>
+<div class="source"><pre>    Triplet&lt;String,Integer,Double&gt; triplet = ...
+    ...
+    for (Object value : tuple) {
+        ...
+    }</pre>
+</div>
+</div>
+<div class="section"><h3>Checking contents</h3>
+<p>Tuples offer some utility methods, like <tt>contains(...)</tt>, <tt>containsAll(...)</tt>, <tt>indexOf(...)</tt> or <tt>lastIndexOf(...)</tt>, which work in exactly the same way as they do in collections:</p>
+<div class="source"><pre>    Quartet&lt;String,Integer,String,Boolean&gt; quartet = ...
+    ...
+    if (quartet.contains(value)) {
+        ...
+    }
+    ...
+    if (quartet.containsAll(valueCollection)) {
+        ...
+    }</pre>
+</div>
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2012
+    
+          The JAVATUPLES team
+          
+  
+
+  
+    
+            
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>
